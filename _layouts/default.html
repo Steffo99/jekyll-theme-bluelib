@@ -1,8 +1,13 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://gh.steffo.eu/bluelib/src/targets/skeleton.root.css" type="text/css">
-        <link rel="stylesheet" href="https://gh.steffo.eu/bluelib/src/targets/{{site.bluelib}}.root.css" type="text/css">
-        <link rel="stylesheet" href="https://gh.steffo.eu/bluelib/src/targets/{{page.bluelib}}.root.css" type="text/css">
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="https://gh.steffo.eu/bluelib/src/targets/skeleton.root.css" type="text/css"/>
+        <link rel="stylesheet" href="https://gh.steffo.eu/bluelib/src/targets/{{ site.bluelib }}.root.css" type="text/css"/>
+        <link rel="stylesheet" href="https://gh.steffo.eu/bluelib/src/targets/{{ page.bluelib }}.root.css" type="text/css"/>
+        {% for css in site.extra_css %}
+            <link rel="stylesheet" href="{{ css }}"/>
+        {% endfor %}
+        <title>{{ page.title }}</title>
     </head>
     <body>
         {{ content }}

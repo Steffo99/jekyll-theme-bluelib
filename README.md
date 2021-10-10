@@ -48,6 +48,7 @@ In particular, it `<link>`s in the following order:
 1. The `skeleton.root.css` from the latest version of bluelib
 2. The bluelib `root` target defined in the `bluelib` variable of `_config.yml` (`site.bluelib`)
 3. The bluelib `root` target defined in the `bluelib` variable of the Front Matter of the page (`page.bluelib`)
+4. The CSS files specified in the `extra_css` array of `_config.yml` (`site.extra_css`)
 
 ### `base`
 
