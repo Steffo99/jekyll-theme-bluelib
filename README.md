@@ -2,6 +2,8 @@
 
 A theme providing Bluelib themes on Jekyll static sites!
 
+![Screenshot](screenshot.png)
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
