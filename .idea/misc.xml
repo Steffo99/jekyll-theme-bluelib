@@ -3,4 +3,7 @@
   <component name="ClojureProjectResolveSettings">
     <currentScheme>IDE</currentScheme>
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="ruby-3.0.2-p107" project-jdk-type="RUBY_SDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
 </project>
