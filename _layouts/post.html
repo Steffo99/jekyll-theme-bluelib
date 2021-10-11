@@ -1,10 +1,25 @@
 ---
-layout: box
+layout: base
 ---
 
-<h2>
-    {{ page.title }}
-</h2>
-{{ content }}
+<section class="panel panel-box page-info">
+    <div class="panel page-date">
+        <time>
+            {{ page.date }}
+        </time>
+    </div>
+    <div class="page-tags">
+        {% for tag in page.tags %}
+            {% include tag.html %}
+        {% endfor %}
+    </div>
+</section>
 
-
+<section class="panel panel-box">
+    <h2>
+        <a href="{{ page.url }}">
+            {{ page.title }}
+        </a>
+    </h2>
+    {{ content }}
+</section>
