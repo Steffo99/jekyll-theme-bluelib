@@ -1,4 +1,4 @@
-.post-summary {
+.summary {
     display: grid;
 
     grid-template-areas:
@@ -12,7 +12,7 @@
     white-space: nowrap;
 }
 
-.post-summary > .post-title {
+.summary > .summary-title {
     grid-area: title;
     justify-self: start;
 
@@ -20,7 +20,7 @@
     font-weight: bold;
 }
 
-.post-summary > .post-date {
+.summary > .summary-date {
     grid-area: date;
     justify-self: start;
 
@@ -30,7 +30,7 @@
     opacity: 0.7;
 }
 
-.post-summary > .post-tags {
+.summary > .summary-tags {
     grid-area: tags;
     justify-self: end;
 
@@ -39,7 +39,7 @@
     gap: 4px;
 }
 
-.page-info {
+.info {
     display: flex;
     flex-direction: row;
     gap: 4px;
@@ -48,7 +48,7 @@
     font-size: small;
 }
 
-.page-info > .page-date {
+.info > .info-date {
     display: inline !important;
     margin: 0 !important;
     width: auto !important;
@@ -56,7 +56,7 @@
     justify-self: start;
 }
 
-.page-info > .page-tags {
+.info > .info-tags {
     display: flex;
     flex-direction: row;
     gap: 4px;

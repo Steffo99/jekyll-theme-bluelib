@@ -9,35 +9,48 @@ layout: base
     {{ content }}
 </section>
 
-<section class="panel panel-box">
-    <h2>
-        Latest posts
-    </h2>
-    <p>
-        These are the latest posts in the blog in reverse chronological order.
-    </p>
-    {% for post in site.posts %}
-        {% include post-summary.html %}
-    {% endfor %}
-</section>
-
-<section class="panel panel-box">
-    <h2>
-        Posts by tag
-    </h2>
-    <p>
-        These are all the posts in the blog, grouped by their tag.
-    </p>
-    <section class="chapter">
-        {% for tag_pair in site.tags %}
-        <section id="tag-{{ tag_pair[0] }}" class="panel panel-box">
-            <h3>
-                {{ tag_pair[0] }}
-            </h3>
-            {% for post in tag_pair[1] %}
-                {% include post-summary.html %}
-            {% endfor %}
-        </section>
+{% if site.posts %}
+    <section class="panel panel-box">
+        <h2>
+            Posts
+        </h2>
+        <p>
+            These are the latest posts in the site in reverse chronological order.
+        </p>
+        {% for post in site.posts %}
+            {% include post-summary.html %}
         {% endfor %}
     </section>
-</section>
+    <section class="panel panel-box">
+        <h2>
+            Posts by tag
+        </h2>
+        <p>
+            These are all the posts in the blog, grouped by their tag.
+        </p>
+        <section class="chapter">
+            {% for tag_pair in site.tags %}
+            <section id="tag-{{ tag_pair[0] }}" class="panel panel-box">
+                <h3>
+                    {{ tag_pair[0] }}
+                </h3>
+                {% for post in tag_pair[1] %}
+                {% include post-summary.html %}
+                {% endfor %}
+            </section>
+            {% endfor %}
+        </section>
+    </section>
+{% else %}
+    <section class="panel panel-box">
+        <h2>
+            Pages
+        </h2>
+        <p>
+            These are the pages in the site in alphabetical order.
+        </p>
+        {% for post in site.posts %}
+            {% include page-summary.html %}
+        {% endfor %}
+    </section>
+{% endif %}

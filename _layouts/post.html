@@ -2,13 +2,13 @@
 layout: base
 ---
 
-<section class="panel panel-box page-info">
-    <div class="panel page-date">
+<section class="panel panel-box info">
+    <div class="panel info-date">
         <time>
             {{ page.date }}
         </time>
     </div>
-    <div class="page-tags">
+    <div class="info-tags">
         {% for tag in page.tags %}
             {% include tag.html %}
         {% endfor %}
