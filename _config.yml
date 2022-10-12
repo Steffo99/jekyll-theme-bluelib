@@ -1,2 +1,12 @@
-title: "Please set a site title in _config.yml!"
-bluelib: "royalblue"
+title: "Bluelib Jekyll"
+
+bluelib: 
+  rulesets:
+    - base.root
+    - classic.root
+    - glass.root
+    - colors-royalblue.root
+    - fonts-fira-ghpages.root
+
+background: >-
+  url(https://gh.steffo.eu/bluelib/examples/Space_Default.jpg)

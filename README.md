@@ -1,8 +1,6 @@
-# jekyll-theme-bluelib
+# Bluelib Jekyll
 
-A theme providing Bluelib themes on Jekyll static sites!
-
-![Screenshot](screenshot.png)
+A *work-in-progress* theme for Jekyll using [Bluelib 5](https://github.com/steffo99/bluelib)!
 
 ## Installation
 
@@ -30,41 +28,47 @@ Or install it yourself as:
 $ gem install jekyll-theme-bluelib
 ```
 
-After installing, add to `_config.yml` the name of your preferred bluelib theme:
+After installing, add to `_config.yml` your desired config:
 ```yml 
-bluelib: "royalblue"
+title: "Bluelib Jekyll"
+
+bluelib: 
+  rulesets:
+    - base.root
+    - classic.root
+    - glass.root
+    - colors-royalblue.root
+    - fonts-fira-ghpages.root
+
+background: >-
+  url(https://gh.steffo.eu/bluelib/examples/Space_Default.jpg)
 ```
 
 ## Usage
 
-The theme provides four layouts: `default`, `base`, `box` and `post`.
+The theme provides three layouts: `0_default`, `1_base` and `2_blog`.
 
-### `default`
+### `0_page`
 
-Default is the simplest layout of the four, and only adds the bluelib stylesheets for the theme to be displayed.
+Default is the simplest layout of the three, and creates the page root, containing only **the Bluelib rulesets** sourced from [UNPKG](https://unpkg.com/), and an **empty body**.
 
-In particular, it `<link>`s in the following order:
+In particular, it `<link>`s the rulesets using the order specified at `site.bluelib.rulesets`.
 
-1. The `skeleton.root.css` from the latest version of bluelib
-2. The bluelib `root` target defined in the `bluelib` variable of `_config.yml` (`site.bluelib`)
-3. The bluelib `root` target defined in the `bluelib` variable of the Front Matter of the page (`page.bluelib`)
-4. The CSS files specified in the `extra_css` array of `_config.yml` (`site.extra_css`)
+### `1_base`
 
-### `base`
+Base adds the website title, hyperlinking to the site home, to the `0_page` layout.
 
-Base adds some elements to the `default` layout: 
+### `2_blog`
 
-- it adds a `layout-threecol` to the page
-- it centers the page `contents` by using `layout-threecol-center` 
-- it renders the `title` defined in `_config.yml` as a `<h1>` element before the contents
+Blog creates a panel disposition intended for posting articles in a blog-like fashon.
 
-### `box`
+It currently supports the following Jekyll features:
 
-Box wraps the `contents` of the page in a `panel panel-box`.
+- [x] Posts
+    - [ ] Tags
+    - [ ] Categories
 
-### `post`
-
-Post extends the `box` layout by adding the `page.title` to the top of the box, rendered as a `<h2>` element.
+It is an adequate index page layout as well!
 
 ## Development
 

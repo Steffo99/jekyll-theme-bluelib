@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <!-- Metadata -->
+        <meta charset="UTF-8"/>
+        <title>{{ page.title }} - {{ site.title }}</title>
+        <!-- Stylesheets -->
+        <style>
+            body {
+                background: {{ site.background }};
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        </style>
+        {% for ruleset in site.bluelib.rulesets %}
+            <link rel="stylesheet" href="https://unpkg.com/@steffo/bluelib@^5/dist/{{ruleset}}.css" type="text/css"/>
+        {% endfor %}
+    </head>
+    <body>
+        {{ content }}
+    </body>
+</html>

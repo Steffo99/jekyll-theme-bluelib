@@ -1,0 +1,63 @@
+---
+layout: 1_base
+---
+
+<style>
+    main {
+        max-width: 900px;
+    }
+
+    aside {
+        max-width: 300px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .panel .list-markerless {
+        margin-left: 0.5ex;
+    }
+
+    .panel .list-markerless li::marker {
+        content: "";
+    }
+
+    time {
+        font-style: var(--bfont-code-style);
+        font-variant: var(--bfont-code-variant);
+        font-weight: var(--bfont-code-weight);
+        font-stretch: var(--bfont-code-stretch);
+        line-height: var(--bfont-code-height);
+        font-family: var(--bfont-code-family);
+    }
+</style>
+
+<div class="chapter-0">
+    <main>
+        <article class="panel panel-box">
+            {% if page.title %}
+                <h2>
+                    {{ page.title }}
+                </h2>
+            {% endif %}
+            {{ content }}
+        </article>
+    </main>
+    {% if site.posts %}
+        <aside>
+            <section class="panel panel-box">
+                <h3>
+                    Latest posts
+                </h3>
+                <ul class="list-markerless">
+                    {% for post in site.posts %}
+                        <li>
+                            <time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time> - <a href="{{ post.url }}">{{ post.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </aside>
+    {% endif %}
+</div>
