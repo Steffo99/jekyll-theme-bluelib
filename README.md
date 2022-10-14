@@ -2,6 +2,8 @@
 
 A *work-in-progress* theme for Jekyll using [Bluelib 5](https://github.com/steffo99/bluelib)!
 
+\[ [**Demo**](https://gh.steffo.eu/jekyll-theme-bluelib/) \]
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
