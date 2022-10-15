@@ -1,8 +1,16 @@
 # Bluelib Jekyll
 
-A *work-in-progress* theme for Jekyll using [Bluelib 5](https://github.com/steffo99/bluelib)!
+A theme for Jekyll using [Bluelib](https://github.com/steffo99/bluelib)
 
 \[ [**Demo**](https://gh.steffo.eu/jekyll-theme-bluelib/) \]
+
+> ### **🔒 Archived** 
+> 
+> The Markdown spec says that `*`, `**` and `~~` output `<em>`, `<strong>` and `<del>` tags respectively, which I think is [semantically incorrect](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b#usage_notes) in HTML.
+> 
+> Sadly, both of Jekyll's Markdown parsers output those tags directly, with no way to change their behaviour.
+> 
+> Therefore, I don't see any usefulness in using Jekyll with Bluelib, so continuing this project would be pointless.
 
 ## Installation
 
